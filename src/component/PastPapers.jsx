@@ -26,17 +26,17 @@ export const PastPapers = () => {
 
         {/* Main content area */}
         <main className="flex-1 p-4 overflow-y-auto">
-          <h1 className="text-2xl md:text-3xl font-bold mb-4">Past Papers</h1>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {['2024', '2023', '2022', '2021', '2020', '2019', '2018', '2017', '2016', '2015', '2014', '2013', '2012', '2011', '2010', '2009', '2008', '2007', '2006', '2005', '2004', '2003', '2002', '2001', '2000'].map((year) => (
-              <div key={year} className="p-4 border bg-[#1e1e1e] rounded shadow hover:shadow-lg">
-                <Link to={`/pastpapers/${year}`} className="block text-center text-blue-300 hover:text-blue-500">
-                  {year}
-                </Link>
-              </div>
-            ))}
-          </div>
-        </main>
+        <h1 className="text-4xl md:text-3xl font-bold mb-4 ">Past Papers</h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {['2024', '2023', '2022', '2021', '2020', '2019', '2018', '2017', '2016', '2015', '2014', '2013', '2012', '2011', '2010', '2009', '2008', '2007', '2006', '2005', '2004', '2003', '2002', '2001', '2000'].map((year) => (
+            <div key={year} className="p-4 border border-l-8 border-l-red-500 bg-[#1e1e1e] rounded-tr-lg rounded-br-lg shadow hover:shadow-lg">
+              <Link to={`/pastpapers/${year}`} className="block text-center text-3xl text-blue-300 hover:text-red-300">
+                {year}
+              </Link>
+            </div>
+          ))}
+        </div>
+      </main>
       </div>
     </div>
   );
