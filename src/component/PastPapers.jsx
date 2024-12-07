@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { QuickMenu } from './QuickMenu'; // Import the SidePanel component
-import { Link } from 'react-router-dom';
+import { QuickMenu } from './QuickMenu';
 
 export const PastPapers = () => {
   const [isSidebarVisible, setIsSidebarVisible] = useState(false);
@@ -8,6 +7,28 @@ export const PastPapers = () => {
   const toggleSidebar = () => {
     setIsSidebarVisible(!isSidebarVisible);
   };
+
+  // Map of years to Google Drive links
+  const pastPapersLinks = {
+    '2024': 'https://drive.google.com/file/d/1VM3JuWmLmiCpJl6EaEaWBIfCVlvYBLXE/view?usp=drive_link',
+    '2023': 'https://drive.google.com/file/d/your-link-for-2023',
+    '2022': 'https://drive.google.com/file/d/your-link-for-2022',
+    '2021': 'https://drive.google.com/file/d/your-link-for-2021',
+    '2020': 'https://drive.google.com/file/d/your-link-for-2020',
+    '2019': 'https://drive.google.com/file/d/your-link-for-2019',
+    '2018': 'https://drive.google.com/file/d/your-link-for-2018',
+    '2017': 'https://drive.google.com/file/d/your-link-for-2017',
+    '2016': 'https://drive.google.com/file/d/your-link-for-2016',
+    '2015': 'https://drive.google.com/file/d/your-link-for-2015',
+    '2014': 'https://drive.google.com/file/d/your-link-for-2014',
+    '2013': 'https://drive.google.com/file/d/your-link-for-2013',
+    '2012': 'https://drive.google.com/file/d/your-link-for-2012',
+    '2011': 'https://drive.google.com/file/d/your-link-for-2011',
+    '2010': 'https://drive.google.com/file/d/your-link-for-2010',
+  };
+
+  // Sort years in descending order
+  const sortedYears = Object.keys(pastPapersLinks).sort((a, b) => b - a);
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -26,17 +47,25 @@ export const PastPapers = () => {
 
         {/* Main content area */}
         <main className="flex-1 p-4 overflow-y-auto">
-        <h1 className="text-4xl md:text-3xl font-bold mb-4 ">Past Papers</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {['2024', '2023', '2022', '2021', '2020', '2019', '2018', '2017', '2016', '2015', '2014', '2013', '2012', '2011', '2010', '2009', '2008', '2007', '2006', '2005', '2004', '2003', '2002', '2001', '2000'].map((year) => (
-            <div key={year} className="p-4 border border-l-8 border-l-red-500 bg-[#1e1e1e] rounded-tr-lg rounded-br-lg shadow hover:shadow-lg">
-              <Link to={`/pastpapers/${year}`} className="block text-center text-3xl text-blue-300 hover:text-red-300">
-                {year}
-              </Link>
-            </div>
-          ))}
-        </div>
-      </main>
+          <h1 className="text-4xl md:text-3xl font-bold mb-4">Past Papers</h1>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {sortedYears.map((year) => (
+              <div
+                key={year}
+                className="p-4 border border-l-8 border-l-red-500 bg-[#1e1e1e] rounded-tr-lg rounded-br-lg shadow hover:shadow-lg"
+              >
+                <a
+                  href={pastPapersLinks[year]}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-center text-3xl text-blue-300 hover:text-red-300"
+                >
+                  {year}
+                </a>
+              </div>
+            ))}
+          </div>
+        </main>
       </div>
     </div>
   );
