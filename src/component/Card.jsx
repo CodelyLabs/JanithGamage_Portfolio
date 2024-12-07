@@ -14,11 +14,11 @@ import { Link } from 'react-router-dom'
 const Card = () => {
   
   useEffect(() => {
-    AOS.init({ duration: 2500 });
+    AOS.init({ duration: 1000 });
   }, []);
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 p-6">
       {/* Card 1 */}
       <div className="Card" data-aos="fade-in">
         <ImageCard imgSrc={bgImage} className={"w-full h-[300px] sm:h-[400px] m-4"}>
