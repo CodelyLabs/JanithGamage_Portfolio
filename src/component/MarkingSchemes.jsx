@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { QuickMenu } from './QuickMenu';
 
-export const PastPapers = () => {
+export const MarkingSchemes = () => {
   const [isSidebarVisible, setIsSidebarVisible] = useState(false);
 
   const toggleSidebar = () => {
@@ -9,7 +9,7 @@ export const PastPapers = () => {
   };
 
   // Map of years to Google Drive links
-  const pastPapersLinks = {
+  const markingSchemeLinks = {
     '2024': 'https://drive.google.com/file/d/1VM3JuWmLmiCpJl6EaEaWBIfCVlvYBLXE/view?usp=drive_link',
     '2023': 'https://drive.google.com/file/d/your-link-for-2023',
     '2022': 'https://drive.google.com/file/d/your-link-for-2022',
@@ -28,7 +28,7 @@ export const PastPapers = () => {
   };
 
   // Sort years in descending order
-  const sortedYears = Object.keys(pastPapersLinks).sort((a, b) => b - a);
+  const sortedYears = Object.keys(markingSchemeLinks).sort((a, b) => b - a);
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -47,7 +47,7 @@ export const PastPapers = () => {
 
         {/* Main content area */}
         <main className="flex-1 p-4 overflow-y-auto">
-          <h1 className="text-4xl md:text-3xl font-bold mb-4">Past Papers</h1>
+          <h1 className="text-4xl md:text-3xl font-bold mb-4">Marking Schemes</h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {sortedYears.map((year) => (
               <div
@@ -55,7 +55,7 @@ export const PastPapers = () => {
                 className="p-4 border border-l-8 border-l-red-500 bg-[#1e1e1e] rounded-tr-lg rounded-br-lg shadow hover:shadow-lg"
               >
                 <a
-                  href={pastPapersLinks[year]}
+                  href={markingSchemeLinks[year]}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block text-center text-3xl text-blue-300 hover:text-red-300"

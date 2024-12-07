@@ -6,7 +6,7 @@ function Chemistry() {
     <>
       {/* Banner Section with Polygon Shape */}
       <div
-        className="bg-red-500 text-white text-center relative h-48 flex items-center justify-center"
+        className="bg-[#E63946] text-white text-center relative h-48 flex items-center justify-center"
         style={{
           clipPath: 'polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%)',
         }}

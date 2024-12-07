@@ -6,6 +6,7 @@ import Chemistry from './component/Chemistry';
 import Business from './component/Business';
 import Aboutme from './component/Aboutme';
 import {PastPapers} from './component/PastPapers';
+import { MarkingSchemes } from './component/MarkingSchemes';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
              <Route path='/businesses' element={<Business/>} />
              <Route path='/aboutme' element={<Aboutme/>} />
              <Route path='/pastpapers' element={<PastPapers/>} />
+             <Route path='/markingschemes' element={<MarkingSchemes/>} />
           </Routes>
           </div>
         </Router>
