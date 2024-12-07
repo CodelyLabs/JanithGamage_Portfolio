@@ -7,12 +7,13 @@ import Business from './component/Business';
 import Aboutme from './component/Aboutme';
 import {PastPapers} from './component/PastPapers';
 import { MarkingSchemes } from './component/MarkingSchemes';
+import { Analysis } from './component/Analysis';
 
 function App() {
   return (
     <>
       <div className='flex flex-col min-h-screen'>
-        <Router>
+        <Router basename="/JanithGamage_Portfolio">
           <Navbar />
           <div className='flex-1'>
           <Routes>
@@ -22,6 +23,7 @@ function App() {
              <Route path='/aboutme' element={<Aboutme/>} />
              <Route path='/pastpapers' element={<PastPapers/>} />
              <Route path='/markingschemes' element={<MarkingSchemes/>} />
+             <Route path='/analysis' element={<Analysis/>} />
           </Routes>
           </div>
         </Router>
