@@ -15,7 +15,7 @@ function App() {
           <Navbar />
           <div className='flex-1'>
           <Routes>
-             <Route path='/' element={<Home/>}/>
+             <Route path='/JanithGamage_Portfolio/' element={<Home/>}/>
              <Route path='/class' element={<Chemistry/>}/>
              <Route path='/businesses' element={<Business/>} />
              <Route path='/aboutme' element={<Aboutme/>} />
