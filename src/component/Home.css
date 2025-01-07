@@ -1,0 +1,42 @@
+@keyframes spin-slow {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes spin-slower {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+  
+  @keyframes floating {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .animate-spin-slow {
+    animation: spin-slow 8s linear infinite;
+    margin-top: 10%;
+  }
+  
+  .animate-spin-slower {
+    animation: spin-slower 12s linear infinite;
+    margin-top: 10%;
+  }
+  
+  .animate-floating {
+    animation: floating 3s ease-in-out infinite;
+    margin-top: 10%;
+  }
+  
