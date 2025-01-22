@@ -3,7 +3,7 @@ import profile from '../assets/2.png';
 import sec2 from '../assets/un1.png';
 import chem from '../assets/recta.svg';
 import './Home.css';
-import abMe from '../assets/3.png'
+import abMe from '../assets/DSC09473.png'
 
 function Home() {
   return (
