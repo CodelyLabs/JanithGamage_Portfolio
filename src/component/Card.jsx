@@ -14,7 +14,7 @@ import { Link } from 'react-router-dom'
 const Card = () => {
   
   useEffect(() => {
-    AOS.init({ duration: 1000 });
+    AOS.init({ duration: 500 });
   }, []);
 
   return (
@@ -74,7 +74,7 @@ const Card = () => {
           <h1 className="text-4xl sm:text-5xl font-bold mb-8">MCQs</h1>
           <div className="space-x-4 mt-4">
             <button className="bg-white text-black rounded-full py-1 px-6 border-2 border-transparent transition-all duration-300 ease-in-out hover:shadow-[0_0_8px_2px_rgba(245,0,0,1)] hover:text-white hover:bg-transparent hover:border-red-400">
-              View Details
+            <Link to="/classifiedmcq">View Details</Link>
             </button>
           </div>
         </ImageCard>

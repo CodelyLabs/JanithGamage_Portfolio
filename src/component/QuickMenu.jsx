@@ -32,7 +32,7 @@ export const QuickMenu = ({ isVisible }) => {
           </Link>
         </li>
         <li>
-          <Link to="/aboutme" className="block p-2 bg-[#E63946] text-white rounded hover:bg-red-300 hover:text-black ">
+          <Link to="/classifiedmcq" className="block p-2 bg-[#E63946] text-white rounded hover:bg-red-300 hover:text-black ">
             Classified MCQ's
           </Link>
         </li>

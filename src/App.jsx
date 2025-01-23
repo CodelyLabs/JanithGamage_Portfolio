@@ -9,6 +9,7 @@ import {PastPapers} from './component/PastPapers';
 import { MarkingSchemes } from './component/MarkingSchemes';
 import { Analysis } from './component/Analysis';
 import {ResourceBooks} from  './component/Resource Books'
+import { ClassifiedMCQ } from './component/ClassifiedMCQ'
 function App() {
   return (
     <>
@@ -24,7 +25,8 @@ function App() {
              <Route path='/pastpapers' element={<PastPapers/>} />
              <Route path='/markingschemes' element={<MarkingSchemes/>} />
              <Route path='/analysis' element={<Analysis/>} />
-             <Route path='resorcebooks' element={<ResourceBooks/>}/>
+             <Route path='/resorcebooks' element={<ResourceBooks/>}/>
+             <Route path='/classifiedmcq' element={<ClassifiedMCQ/>}/>
           </Routes>
           </div>
         </Router>
