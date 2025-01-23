@@ -8,7 +8,7 @@ import Aboutme from './component/Aboutme';
 import {PastPapers} from './component/PastPapers';
 import { MarkingSchemes } from './component/MarkingSchemes';
 import { Analysis } from './component/Analysis';
-
+import {ResourceBooks} from  './component/Resource Books'
 function App() {
   return (
     <>
@@ -24,6 +24,7 @@ function App() {
              <Route path='/pastpapers' element={<PastPapers/>} />
              <Route path='/markingschemes' element={<MarkingSchemes/>} />
              <Route path='/analysis' element={<Analysis/>} />
+             <Route path='resorcebooks' element={<ResourceBooks/>}/>
           </Routes>
           </div>
         </Router>
