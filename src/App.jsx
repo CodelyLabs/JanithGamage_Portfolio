@@ -10,6 +10,8 @@ import { MarkingSchemes } from './component/MarkingSchemes';
 import { Analysis } from './component/Analysis';
 import {ResourceBooks} from  './component/Resource Books'
 import { ClassifiedMCQ } from './component/ClassifiedMCQ'
+import ContactMe from './component/ContactMe';
+import Other from './component/Other';
 function App() {
   return (
     <>
@@ -27,6 +29,8 @@ function App() {
              <Route path='/analysis' element={<Analysis/>} />
              <Route path='/resorcebooks' element={<ResourceBooks/>}/>
              <Route path='/classifiedmcq' element={<ClassifiedMCQ/>}/>
+             <Route path='/contactme' element={<ContactMe/>}/>
+             <Route path='/others' element={<Other/>}/>
           </Routes>
           </div>
         </Router>

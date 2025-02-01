@@ -1,66 +1,54 @@
-import React from 'react';
-import logo from '../assets/Janith Liaya (3.3).png';
+import React from "react";
+import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import logo from "../assets/Janith Liaya (3.3).png";
 
 function Footer() {
   return (
-    <div className="h-auto w-full bg-[#1C1C1C] text-slate-50 p-4">
-      {/* Main Footer Content */}
-      <div className="flex flex-col lg:flex-row lg:space-x-10 justify-center items-center lg:items-start text-center lg:text-left">
+    <footer className="w-full bg-[#1C1C1C] text-slate-50 p-6">
+      {/* Container */}
+      <div className="flex flex-col lg:flex-row lg:justify-between items-center lg:items-start text-center lg:text-left gap-6 max-w-6xl mx-auto">
         
-        {/* Logo */}
-        <img
-          src={logo}
-          alt="logo"
-          className="w-[8rem] lg:w-[10rem] mb-4 lg:mb-0"
-        />
+        {/* Logo Section */}
+        <div className="flex flex-col items-center lg:items-start">
+          <img src={logo} alt="logo" className="w-28 lg:w-32 mb-3" />
+          <p className="text-sm text-gray-400">Your tagline or brief description</p>
+        </div>
 
-        {/* Chemistry Links */}
-        <div className="text-sm lg:text-base max-w-[16rem] mx-2 mb-4 lg:mb-0">
-          <h4 className="font-semibold mb-2">- Quick Links -</h4>
+        {/* Quick Links */}
+        <div className="text-sm space-y-2">
+          <h4 className="font-semibold text-lg mb-2">Quick Links</h4>
           <ul className="space-y-1">
-            <li>
-              <a href="/chemistry/pastpapers" className="hover:underline">
-                Past Papers
-              </a>
-            </li>
-            <li>
-              <a href="/chemistry/markingscheme" className="hover:underline">
-                Marking Scheme
-              </a>
-            </li>
-            <li>
-              <a href="/chemistry/analysis" className="hover:underline">
-                Analysis
-              </a>
-            </li>
-            <li>
-              <a href="/chemistry/mcq" className="hover:underline">
-                Classified MCQs
-              </a>
-            </li>
-            <li>
-              <a href="/chemistry/resourcebooks" className="hover:underline">
-                Resource Books
-              </a>
-            </li>
+            <li><a href="/chemistry/pastpapers" className="hover:text-[#FFD700] transition">Past Papers</a></li>
+            <li><a href="/chemistry/markingscheme" className="hover:text-[#FFD700] transition">Marking Scheme</a></li>
+            <li><a href="/chemistry/analysis" className="hover:text-[#FFD700] transition">Analysis</a></li>
+            <li><a href="/chemistry/mcq" className="hover:text-[#FFD700] transition">Classified MCQs</a></li>
+            <li><a href="/chemistry/resourcebooks" className="hover:text-[#FFD700] transition">Resource Books</a></li>
           </ul>
         </div>
 
-        {/* Business Links */}
-        <div className="text-sm lg:text-base max-w-[16rem] mx-2 mb-4 lg:mb-0">
-          <p>
-            <a href="/business" className="hover:underline">Business</a>
-          </p>
+        {/* Business & Contact */}
+        <div className="text-sm space-y-2">
+          <h4 className="font-semibold text-lg mb-2">More</h4>
+          <p><a href="/business" className="hover:text-[#FFD700] transition">Business</a></p>
+          <p><a href="/contact" className="hover:text-[#FFD700] transition">About Me</a></p>
         </div>
 
-        {/* Contact Us */}
-        <div className="text-sm lg:text-base max-w-[16rem] mx-2">
-          <p>
-            <a href="/contact" className="hover:underline">About Me</a>
-          </p>
+        {/* Social Media Links */}
+        <div className="text-sm flex flex-col items-center lg:items-start">
+          <h4 className="font-semibold text-lg mb-2">Follow Me</h4>
+          <div className="flex space-x-4 text-lg">
+            <a href="#" className="hover:text-blue-500 transition"><FaFacebook /></a>
+            <a href="#" className="hover:text-pink-500 transition"><FaInstagram /></a>
+            <a href="#" className="hover:text-blue-400 transition"><FaTwitter /></a>
+          </div>
         </div>
       </div>
-    </div>
+
+      {/* Copyright */}
+      <div className="text-xs text-gray-500 text-center mt-6">
+        &copy; {new Date().getFullYear()} CodelyLabs. All rights reserved.
+      </div>
+    </footer>
   );
 }
 

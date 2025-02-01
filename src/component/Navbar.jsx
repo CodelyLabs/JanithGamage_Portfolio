@@ -72,7 +72,7 @@ function Navbar() {
             </li>
             <li className="text-lg font-semibold">
               <NavLink
-                to="/aboutme"
+                to="/contactme"
                 className="hover:text-red-500"
                 onClick={() => setIsMenuOpen(false)}
               >
