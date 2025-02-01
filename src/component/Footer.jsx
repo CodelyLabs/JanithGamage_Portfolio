@@ -4,7 +4,7 @@ import logo from "../assets/Janith Liaya (3.3).png";
 
 function Footer() {
   return (
-    <div className="h-auto w-full bg-gradient-to-r from-gray-800 via-gray-900 to-black text-slate-50 p-4">
+    <footer className="h-auto w-full bg-gradient-to-r from-gray-800 via-gray-900 to-black text-slate-50 p-4">
       {/* Main Footer Content */}
       <div className="flex flex-col lg:flex-row lg:space-x-10 justify-center items-center lg:items-start text-center lg:text-left">
         
