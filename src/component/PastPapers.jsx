@@ -31,13 +31,13 @@ export const PastPapers = () => {
   const sortedYears = Object.keys(pastPapersLinks).sort((a, b) => b - a);
 
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-br from-[#FFEBEB] to-[#FFE4E4]">
+    <div className="flex flex-col min-h-screen "> {/*bg-gradient-to-br from-[#FFEBEB] to-[#FFE4E4]*/}
       {/* Mobile menu button */}
       <button
-        className="block md:hidden p-4 bg-[#E63946] text-white font-bold rounded-lg shadow-lg hover:bg-[#D62839] transition duration-300"
+        className="block md:hidden p-4 bg-[#E63946] text-white  shadow-lg hover:bg-[#D62839] transition duration-300"
         onClick={toggleSidebar}
       >
-        ☰ Menu
+        Menu
       </button>
 
       {/* Main content container */}
@@ -47,9 +47,13 @@ export const PastPapers = () => {
 
         {/* Main content area */}
         <main className="flex-1 p-6">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-center text-[#E63946] mb-8 uppercase tracking-wide drop-shadow-lg">
-            Past Papers
-          </h1>
+        <div className="relative flex items-center mb-8">
+                <div className="flex-grow border-t-4 border-black"></div>
+                  <h1 className="px-4 text-3xl md:text-5xl font-extrabold text-center text-[#1e1e1e] uppercase tracking-wide drop-shadow-lg">
+                    Past Papers
+                  </h1>
+                <div className="flex-grow border-t-4 border-black"></div>
+              </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {sortedYears.map((year) => (
               <div

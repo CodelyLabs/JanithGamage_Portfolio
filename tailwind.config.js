@@ -19,6 +19,9 @@ export default {
         '3xl': '1920px', // Very large desktops
         '4k': '2560px',  // 4K resolution devices
       },
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+      },
     },
   },
   plugins: [],

@@ -38,21 +38,30 @@ export const ClassifiedMCQ = () => {
 
         {/* Main content area */}
         <main className="flex-1 p-4 overflow-y-auto">
-          <h1 className="text-4xl md:text-3xl font-bold mb-4">Classified MCQ</h1>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div className="relative flex items-center mb-8">
+            <div className="flex-grow border-t-4 border-black"></div>
+              <h1 className="px-4 text-3xl md:text-5xl font-extrabold text-center text-[#1e1e1e] uppercase tracking-wide drop-shadow-lg">
+                    Classified MCQ
+              </h1>
+            <div className="flex-grow border-t-4 border-black"></div>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {sortedYears.map((year) => (
               <div
                 key={year}
-                className="p-4 border border-l-8 border-l-red-500 bg-[#1e1e1e] rounded-tr-lg rounded-br-lg shadow hover:shadow-lg"
+                className="relative p-6 rounded-xl shadow-xl backdrop-blur-md bg-[#1e1e1e] border border-white/20 transition transform hover:scale-105 hover:shadow-2xl duration-300"
               >
                 <a
                   href={ClassifiedMCQLinks[year]}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block text-center text-3xl text-blue-300 hover:text-red-300"
+                  className="block text-center text-3xl font-bold text-white bg-gradient-to-r from-[#E63946] to-[#D62839] py-3 rounded-lg shadow-md hover:shadow-xl transition duration-300"
                 >
                   {year}
                 </a>
+                <p className="text-center text-sm text-white/80 mt-2">
+                  Download Here.
+                </p>
               </div>
             ))}
           </div>

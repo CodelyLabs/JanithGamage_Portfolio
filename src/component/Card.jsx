@@ -4,6 +4,7 @@ import markingImage from "../assets/image (3).png";
 import analysisImage from "../assets/image (4).png";
 import resourceImage from "../assets/image (5).png";
 import mcqImage from "../assets/image (6).png";
+import galleryImage from "../assets/gallery.png"
 import AOS from 'aos'; // Import AOS JavaScript
 import 'aos/dist/aos.css'; // Import AOS CSS
 import { useEffect } from 'react'; // Import useEffect hook
@@ -84,7 +85,7 @@ const Card = () => {
 
       {/* Card 6 */}
       <div className="Card" data-aos="fade-in" data-aos-delay="800">
-        <ImageCard imgSrc={mcqImage} className={"w-full h-[300px] sm:h-[400px] m-4"}>
+        <ImageCard imgSrc={galleryImage} className={"w-full h-[300px] sm:h-[400px] m-4"}>
           <h1 className="text-4xl sm:text-5xl font-bold mb-4">Gallery</h1>
           <div className="space-x-4 mt-4">
             <button className="bg-white text-black rounded-full py-1 px-6 border-2 border-transparent transition-all duration-300 ease-in-out hover:shadow-[0_0_8px_2px_rgba(245,0,0,1)] hover:text-white hover:bg-transparent hover:border-red-400">
