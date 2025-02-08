@@ -36,6 +36,11 @@ export const QuickMenu = ({ isVisible }) => {
             Classified MCQ's
           </Link>
         </li>
+        <li>
+          <Link to="/gallery" className="block p-2 bg-[#E63946] text-white rounded hover:bg-red-300 hover:text-black ">
+            Gallery
+          </Link>
+        </li>
       </ul>
     </aside>
   );
